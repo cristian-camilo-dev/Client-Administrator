@@ -4,14 +4,15 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import NuevoCliente from "./pages/NuevoCliente";
-import Inicio from "./pages/Inicio";
+import Inicio, {loader as clienteLoader } from "./pages/Inicio";
 
 const router = createBrowserRouter([
   { path: "/", 
   element: <Layout />,
   children: [
     { path: "/",
-      element: <Inicio />
+      element: <Inicio />,
+      loader: clienteLoader,
   },
     { path: "/clientes/nuevo", 
       element: <NuevoCliente /> 
