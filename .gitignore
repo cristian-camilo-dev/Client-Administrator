@@ -8,6 +8,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Env files
+.env
+
+# Dependencies
 node_modules
 dist
 dist-ssr
