@@ -1,6 +1,7 @@
-import { useNavigate, Form, useActionData } from "react-router-dom";
+import { useNavigate, Form, useActionData, redirect } from "react-router-dom";
 import Formulario from "../components/Formulario";
 import Errores from "../components/Errores";
+import { agregarCliente } from "../data/clientes";
 
 export async function action({ request }) {
   const formData = await request.formData(); // FormData es un objeto que permite crear un conjunto de pares clave/valor que representan campos de un formulario
@@ -28,9 +29,14 @@ export async function action({ request }) {
     return errores
   }
 
-  
+  //agregar el cliente
 
-  return errores;
+  await agregarCliente(data);
+
+  //redireccionar
+
+  return redirect("/");
+  
 }
 
 export default function NuevoCliente() {
