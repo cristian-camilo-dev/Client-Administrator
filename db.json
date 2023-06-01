@@ -1,24 +1,10 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nombre": "Juan",
-      "telefono": 102013313,
-      "email": "juan@juan.com",
-      "empresa": "Codigo Con Juan"
-    },
-    {
       "id": 2,
       "nombre": "Karen",
       "telefono": 138198313,
       "email": "karen@juan.com",
-      "empresa": "Codigo Con Juan"
-    },
-    {
-      "id": 3,
-      "nombre": "Josue",
-      "telefono": 31983913,
-      "email": "josue@juan.com",
       "empresa": "Codigo Con Juan"
     },
     {
@@ -29,19 +15,12 @@
       "empresa": "Codigo Con Juan"
     },
     {
-      "id": 5,
-      "nombre": "Pedro",
-      "telefono": 1398198938,
+      "nombre": "milo",
+      "empresa": "Codigo Con Juan",
       "email": "pedro@juan.com",
-      "empresa": "Codigo Con Juan"
-    },
-    {
-      "nombre": "CRISTHIAN CAMILO",
-      "empresa": "berenjenas",
-      "email": "cristianrodrig149@gmail.com",
-      "telefono": "6421025",
-      "notas": "cortar el lunes",
-      "id": 6
+      "telefono": "1398198938",
+      "notas": "ssssss",
+      "id": 5
     }
   ]
 }

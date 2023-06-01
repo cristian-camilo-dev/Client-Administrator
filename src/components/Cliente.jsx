@@ -1,8 +1,26 @@
 //importar prop-types
 import PropTypes from "prop-types";
+import { eliminarCliente } from "../data/clientes";
+import { useNavigate, Form, redirect } from "react-router-dom";
+
+
+export async function action({  params }) {
+
+  //eliminar el cliente
+  
+
+  await eliminarCliente(params.clientesId);
+
+  //redireccionar
+
+  return redirect("/");
+
+}
 
 const Cliente = ({ cliente }) => {
+  const navigate = useNavigate();
   const { nombre, empresa, email, telefono } = cliente;
+ 
 
   return (
     <tr className="border">
@@ -24,15 +42,22 @@ const Cliente = ({ cliente }) => {
         <button
           type="button"
           className="text-blue-600 hover:text-blue-700 upeprcase text-xs font-bold "
+          onClick={() => navigate(`/clientes/${cliente.id}/editar`) }
         >
           Editar
         </button>
+        <Form 
+          method="POST"
+          action={`/clientes/${cliente.id}/eliminar`}
+          >
         <button
-          type="button"
+          type="submit"
           className="text-red-600 hover:text-red-700 upeprcase text-xs font-bold ml-2"
         >
           Eliminar
         </button>
+        </Form>
+
       </td>
     </tr>
   );
